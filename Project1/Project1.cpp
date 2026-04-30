@@ -2,7 +2,7 @@
 
 int main()
 {
-    std::cout << "Omar Jouied";
+    std::cout << "The results of " << "10 + 5 = " << 10 + 5 << std::endl;
 
     return 0;
 }
