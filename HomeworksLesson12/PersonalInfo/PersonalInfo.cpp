@@ -1,15 +1,16 @@
 #include <iostream>
+using namespace std;
 
 int main()
 {
-    std::cout << "*************************\n";
+    cout << "*************************\n";
 
-    std::cout << "Name: " << "Omar Jouied.\n";
-    std::cout << "Age : " << 26 << " Years.\n";
-    std::cout << "City: " << "Mdiq.\n";
-    std::cout << "Country: " << "Morocco.\n";
-    
-    std::cout << "*************************\n";
+    cout << "Name: " << "Omar Jouied.\n";
+    cout << "Age : " << 26 << " Years.\n";
+    cout << "City: " << "Mdiq.\n";
+    cout << "Country: " << "Morocco.\n";
+
+    cout << "*************************\n";
 
     return 0;
 }
