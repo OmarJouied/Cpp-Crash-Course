@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    int Age;
+    unsigned short Age;
     
     cout << "Enter Your Age?\n";
     cin >> Age;

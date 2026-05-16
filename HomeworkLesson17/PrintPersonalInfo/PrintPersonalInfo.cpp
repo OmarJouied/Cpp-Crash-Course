@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
     string MyName = "Omar Jouied", MyCity = "M'diq", MyCountry = "Morocco";
-    int MyAge = 26;
+    unsigned short MyAge = 26;
     float MyMonthlySalary = 5000;
     char MyGender = 'M';
     bool IsMarried = false;
