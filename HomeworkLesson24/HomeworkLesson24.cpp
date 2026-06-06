@@ -11,14 +11,14 @@ int main()
     cout << "Please enter the first number B?\n";
     cin >> B;
 
-    cout << "A = " << A << ", B = " << B << endl << endl;
+    cout << endl;
 
-    cout << "A == B = " << (A == B) << endl;
-    cout << "A != B = " << (A != B) << endl;
-    cout << "A > B = " << (A > B) << endl;
-    cout << "A < B = " << (A < B) << endl;
-    cout << "A >= B = " << (A >= B) << endl;
-    cout << "A <= B = " << (A <= B) << endl;
+    cout << A << " == " << B << " is " << (A == B) << endl;
+    cout << A << " != " << B << " is " << (A != B) << endl;
+    cout << A << " > "  << B << " is " << (A > B) << endl;
+    cout << A << " < "  << B << " is " << (A < B) << endl;
+    cout << A << " >= " << B << " is " << (A >= B) << endl;
+    cout << A << " <= " << B << " is " << (A <= B) << endl;
 
     return 0;
 }
