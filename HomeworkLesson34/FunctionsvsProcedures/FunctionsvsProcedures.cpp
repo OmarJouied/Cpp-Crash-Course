@@ -15,8 +15,19 @@ void mySumProcedure()
     cout << Num1 + Num2 << endl;
 }
 
-int mySumFunction()
+int mySumFunction(int Num1, int Num2)
 {
+    return Num1 + Num2;
+}
+
+int main()
+{
+    mySumProcedure();
+    cout << mySumFunction(10, 20) << endl;
+    cout << mySumFunction(5, 7) << endl;
+    cout << mySumFunction(3, 4) << endl;
+    cout << mySumFunction(150, 20) << endl;
+
     int Num1, Num2;
 
     cout << "Please enter Number1?\n";
@@ -25,14 +36,7 @@ int mySumFunction()
     cout << "Please enter Number2?\n";
     cin >> Num2;
 
-    cout << "*********************\n";
-    return Num1 + Num2;
-}
-
-int main()
-{
-    mySumProcedure();
-    cout << mySumFunction() << endl;
+    cout << mySumFunction(Num1, Num2) << endl;
 
     return 0;
 }
