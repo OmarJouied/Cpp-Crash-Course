@@ -25,10 +25,8 @@ struct stPerson
     stAddress Address;
 };
 
-int main()
+void ReadPersonInfo(stPerson& Person)
 {
-    stPerson Person;
-
     cout << "Enter your Name?" << endl;
     cin >> Person.Name;
     cout << "Enter your Age?" << endl;
@@ -53,8 +51,11 @@ int main()
     cin >> Person.ContactInfo.Email;
     cout << "Enter your Facebook Page Link?" << endl;
     cin >> Person.ContactInfo.FacebookPageLink;
+}
 
-    cout << "****************************" << endl;
+void PrintPersonInfo(stPerson Person)
+{
+    cout << "\n****************************\n";
     cout << "Name: " << Person.Name << endl;
     cout << "Age: " << Person.Age << " Years" << endl;
     cout << "City: " << Person.City << endl;
@@ -68,8 +69,14 @@ int main()
     cout << "Phone Number: " << Person.ContactInfo.PhoneNumber << endl;
     cout << "Email: " << Person.ContactInfo.Email << endl;
     cout << "Facebook Page Link: " << Person.ContactInfo.FacebookPageLink << endl;
+    cout << "\n****************************\n" << endl;
+}
 
-    cout << "****************************" << endl;
+int main()
+{
+    stPerson Person;
+    ReadPersonInfo(Person);
+    PrintPersonInfo(Person);
 
     return 0;
 }
