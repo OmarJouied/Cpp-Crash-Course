@@ -21,24 +21,20 @@ int main()
     cin >> UserChose;
     Color = (enScreenColor) UserChose;
 
-    if (Color == enScreenColor::Red)
-    {
+    switch (Color) {
+    case enScreenColor::Red:
         system("color 4F");
-    }
-    else if (Color == enScreenColor::Blue)
-    {
+        break;
+    case enScreenColor::Blue:
         system("color 1F");
-    }
-    else if (Color == enScreenColor::Green)
-    {
+        break;
+    case enScreenColor::Green:
         system("color 2F");
-    }
-    else if (Color == enScreenColor::Yellow)
-    {
+        break;
+    case enScreenColor::Yellow:
         system("color 6F");
-    }
-    else
-    {
+        break;
+    default:
         system("color FA");
     }
 
@@ -60,32 +56,26 @@ int main()
     cin >> CountryNumber;
     Country = (enCountryChoice)CountryNumber;
 
-    if (Country == enCountryChoice::Jordan)
-    {
+    switch (Country) {
+    case enCountryChoice::Jordan:
         cout << "Your country is Jordan\n";
-    }
-    else if (Country == enCountryChoice::Tunisa)
-    {
+        break;
+    case enCountryChoice::Tunisa:
         cout << "Your country is Tunisa\n";
-    }
-    else if (Country == enCountryChoice::Algeria)
-    {
+        break;
+    case enCountryChoice::Algeria:
         cout << "Your country is Algeria\n";
-    }
-    else if (Country == enCountryChoice::Oman)
-    {
+        break;
+    case enCountryChoice::Oman:
         cout << "Your country is Oman\n";
-    }
-    else if (Country == enCountryChoice::Egypt)
-    {
+        break;
+    case enCountryChoice::Egypt:
         cout << "Your country is Egypt\n";
-    }
-    else if (Country == enCountryChoice::Iraq)
-    {
+        break;
+    case enCountryChoice::Iraq:
         cout << "Your country is Iraq\n";
-    }
-    else
-    {
+        break;
+    default:
         cout << "Your country is Other\n";
     }
 
