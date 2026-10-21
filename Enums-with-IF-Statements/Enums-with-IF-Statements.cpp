@@ -2,9 +2,8 @@
 using namespace std;
 
 enum enScreenColor { Red = 1, Blue = 2, Green = 3, Yellow = 4 };
-enum enCountryChoice { Jordan = 1, Tunisa = 2, Algeria = 3, Oman = 4, Egypt = 5, Iraq = 6, Other = 7 };
 
-int main()
+void ShowScreenColorMenu()
 {
     cout << "*****************************\n";
     cout << "Please Chose the number of your color?\n";
@@ -13,15 +12,18 @@ int main()
     cout << "(3) Green\n";
     cout << "(4) Yellow\n";
     cout << "*****************************\n";
-    cout << "Your Choice? ";
+}
 
-    int UserChose;
-    enScreenColor Color;
+enScreenColor ReadScreenColor()
+{
+    int SC;
+    cin >> SC;
+    return (enScreenColor)SC;
+}
 
-    cin >> UserChose;
-    Color = (enScreenColor) UserChose;
-
-    switch (Color) {
+void ApplayScreenColorCommand(enScreenColor ScreenColor)
+{
+    switch (ScreenColor) {
     case enScreenColor::Red:
         system("color 4F");
         break;
@@ -37,7 +39,12 @@ int main()
     default:
         system("color FA");
     }
+}
 
+enum enCountryChoice { Jordan = 1, Tunisa = 2, Algeria = 3, Oman = 4, Egypt = 5, Iraq = 6, Other = 7 };
+
+void ShowCountryMenu()
+{
     cout << "*****************************\n";
     cout << "Please Chose the number of your country?\n";
     cout << "(1) Jordan\n";
@@ -48,36 +55,47 @@ int main()
     cout << "(6) Iraq\n";
     cout << "(7) Other\n";
     cout << "*****************************\n";
-    cout << "Your Choice? ";
+}
 
-    int CountryNumber;
-    enCountryChoice Country;
+enCountryChoice ReadCountryChoice()
+{
+    int Country;
+    cin >> Country;
+    return (enCountryChoice)Country;
+}
 
-    cin >> CountryNumber;
-    Country = (enCountryChoice)CountryNumber;
-
-    switch (Country) {
+string GetCountryName(enCountryChoice CountryChoice)
+{
+    switch (CountryChoice) {
     case enCountryChoice::Jordan:
-        cout << "Your country is Jordan\n";
-        break;
+        return "Jordan";
     case enCountryChoice::Tunisa:
-        cout << "Your country is Tunisa\n";
-        break;
+        return "Tunisa";
     case enCountryChoice::Algeria:
-        cout << "Your country is Algeria\n";
-        break;
+        return "Algeria";
     case enCountryChoice::Oman:
-        cout << "Your country is Oman\n";
-        break;
+        return "Oman";
     case enCountryChoice::Egypt:
-        cout << "Your country is Egypt\n";
-        break;
+        return "Egypt";
     case enCountryChoice::Iraq:
-        cout << "Your country is Iraq\n";
-        break;
+        return "Iraq";
     default:
-        cout << "Your country is Other\n";
+        return "Other";
     }
+}
+
+int main()
+{
+    
+    ShowScreenColorMenu();
+
+    ApplayScreenColorCommand(ReadScreenColor());
+
+    ShowCountryMenu();
+
+    string CountryName = GetCountryName(ReadCountryChoice());
+
+    cout << "Your Country Choice: " << CountryName << endl;
 
     return 0;
 }
