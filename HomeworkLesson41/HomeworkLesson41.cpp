@@ -36,24 +36,34 @@ void PrintPerson(stPerson Person)
     cout << "*****************\n";
 }
 
-void ReadPersons(stPerson Persons[2])
+void ReadPersons(stPerson Persons[100], int& Length)
 {
-    ReadPerson(Persons[0]);
-    ReadPerson(Persons[1]);
+    cout << "How many Persons you need? (1 - 100)\n";
+    cin >> Length;
+
+    for (int i = 0; i < Length; i++)
+    {
+        cout << "Person " << i + 1 << endl;
+        ReadPerson(Persons[i]);
+    }
 }
 
-void PrintPersons(stPerson Persons[2])
+void PrintPersons(stPerson Persons[100],int Length)
 {
-    PrintPerson(Persons[0]);
-    PrintPerson(Persons[1]);
+    for (int i = 0; i < Length; i++)
+    {
+        cout << "Person " << i + 1 << endl;
+        PrintPerson(Persons[i]);
+    }
 }
 
 int main()
 {
-    stPerson Persons[2];
+    stPerson Persons[100];
+    int Length = 0;
 
-    ReadPersons(Persons);
-    PrintPersons(Persons);
+    ReadPersons(Persons, Length);
+    PrintPersons(Persons, Length);
 
     return 0;
 }
