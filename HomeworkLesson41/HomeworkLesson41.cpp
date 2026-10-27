@@ -48,7 +48,7 @@ void ReadPersons(stPerson Persons[100], int& Length)
     }
 }
 
-void PrintPersons(stPerson Persons[100],int Length)
+void PrintPersons(stPerson Persons[100], int Length)
 {
     for (int i = 0; i < Length; i++)
     {
